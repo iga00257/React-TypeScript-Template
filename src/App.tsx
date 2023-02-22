@@ -1,5 +1,4 @@
 import './App.css'
-import { ChatRoom } from './pages/chatroom'
 import SideMenu from './pages/SideMenu'
 
 function App () {
@@ -12,7 +11,7 @@ function App () {
         </div>
         <div className="h-full grow bg-zinc-50 border">
             <p className="mx-4 text-center text-xs opacity-60">
-               <ChatRoom />
+              remove me
             </p>
         </div>
       </div>

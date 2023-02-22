@@ -7,16 +7,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter([
   {
     path: '/*', // TODO: 先判斷有沒有這個chatroom的權限，沒有的話顯示 <div>你沒權限</div>
-    element: <App />,
-    children: [
-      {
-        path: 'team/:teamId/all',
-        element: <div>Initial page</div>
-      }
-    ]
+    element: <App />
   },
   {
-    path: '/:chatroom', // TODO: 先判斷有沒有這個workspace的權限，沒有的話顯示 <div>你沒權限</div>
+    path: '/', // TODO: 先判斷有沒有這個workspace的權限，沒有的話顯示 <div>你沒權限</div>
     element: <App />
   }
 ])
