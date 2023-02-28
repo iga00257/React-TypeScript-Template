@@ -1,21 +1,17 @@
 import './App.css'
-import SideMenu from './pages/SideMenu'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './containers/Layout'
+const router = createBrowserRouter([
+  {
+    path: '/*', // 基本Layout
+    element: <Layout />
+  }
+
+])
 
 function App () {
   return (
-    <div>
-      <div data-tauri-drag-region className="fixed h-12 w-full" />
-      <div className="flex h-screen w-screen">
-        <div className="h-full w-64 bg-zinc-50/50">
-          <SideMenu />
-        </div>
-        <div className="h-full grow bg-zinc-50 border">
-            <p className="mx-4 text-center text-xs opacity-60">
-              remove me
-            </p>
-        </div>
-      </div>
-    </div>
+      <RouterProvider router={router} />
   )
 }
 

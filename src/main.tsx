@@ -1,22 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
 import App from './App'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
-const router = createBrowserRouter([
-  {
-    path: '/*', // TODO: 先判斷有沒有這個chatroom的權限，沒有的話顯示 <div>你沒權限</div>
-    element: <App />
-  },
-  {
-    path: '/', // TODO: 先判斷有沒有這個workspace的權限，沒有的話顯示 <div>你沒權限</div>
-    element: <App />
-  }
-])
+import store from './app/store'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+        <Provider store={store}>
+    <App/>
+    </Provider>
   </React.StrictMode>
 )
