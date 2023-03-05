@@ -20,9 +20,9 @@ function PageContent () {
   }, [pageTitle])
 
   return (
-        <div className="flex flex-col ">
+        <div className="flex flex-col bg-primaryBG text-secondaryText/90">
             <Header/>
-            <main className="flex-1 overflow-y-auto pt-8 px-6  bg-base-200" ref={mainContentRef}>
+            <main className="flex-1 overflow-y-auto pt-8 px-6" ref={mainContentRef}>
                 <Suspense fallback={<SuspenseContent />}>
                         <Routes>
                             {

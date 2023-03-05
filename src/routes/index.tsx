@@ -21,7 +21,7 @@ const routes = [
     component: Page404
   },
   {
-    path: '/dashboard',
+    path: '/app/dashboard',
     component: Dashboard
   }
 
