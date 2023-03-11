@@ -1,6 +1,7 @@
 import SelectBox from '../../components/Input/SelectBox'
 import ShareIcon from '@heroicons/react/24/outline/ShareIcon'
 import ArrowPathIcon from '@heroicons/react/24/outline/ArrowPathIcon'
+import StackAvatar from '../../components/Avatar/StackAvatar'
 
 const periodOptions = [
   { name: 'Classification', value: 'TODAY' },
@@ -10,7 +11,18 @@ const periodOptions = [
   { name: 'Project3', value: 'THIS_MONTH' },
   { name: 'Project4', value: 'LAST_MONTH' }
 ]
+const teamMembers = [
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profi123123123le-picture-5.jpg"},
+  {id:"0",name:""},
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
+  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
 
+]
 function DashboardTopBar ({ updateDashboardPeriod }) {
   const updateSelectBoxValue = ({ updateVar, value }) => {
     updateDashboardPeriod(value)
@@ -18,16 +30,17 @@ function DashboardTopBar ({ updateDashboardPeriod }) {
 
   return (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className=" ">
+            <div className=" flex items-center ">
             <SelectBox
                 options={periodOptions}
                 labelTitle="Period"
                 placeholder="Select date range"
-                containerStyle="w-72 bg-white"
+                containerStyle="w-72 bg-white mr-5"
                 labelStyle="hidden "
                 defaultValue="TODAY"
                 updateFormValue={updateSelectBoxValue}
             />
+            <StackAvatar teamMembers={teamMembers} displayLimit={5}/>
             </div>
             <div className="text-right ">
                 <button className=" inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center
