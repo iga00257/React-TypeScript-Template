@@ -20,7 +20,6 @@ const teamMembers = [
   {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
   {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
   {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
 
 ]
 function DashboardTopBar ({ updateDashboardPeriod }) {

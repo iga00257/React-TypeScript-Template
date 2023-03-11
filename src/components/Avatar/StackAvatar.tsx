@@ -1,9 +1,5 @@
 import reactIcon from '../../assets/react.svg'
 
-
-
-
-
 interface Image{
     src?:string
     alt?:string
@@ -17,6 +13,7 @@ interface User{
 interface Props{
     teamMembers?:User[]
     displayLimit?:number
+    containerStyle?:string
 }
 
 export const Images = ({src,alt,link}:Image)=>{
@@ -34,15 +31,15 @@ export const Images = ({src,alt,link}:Image)=>{
         </>
     )
 }
-const StackAvatar = ({teamMembers=[],displayLimit=2}:Props)=>{
+const StackAvatar = ({teamMembers=[],displayLimit=2,containerStyle=''}:Props)=>{
     
-    return(<div className="flex -space-x-4">
+    return(<div className={`flex -space-x-4 ${containerStyle}`}>
         {teamMembers.map((member:User,index)=>{
             if (index<displayLimit) {
                 return<Images src={member.pictureSrc} />
             }
             if (index===displayLimit) {
-                return<a className="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+{teamMembers.length-3}</a>
+                return<a className="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+{teamMembers.length-displayLimit}</a>
             }
             return
         })}
