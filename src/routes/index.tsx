@@ -8,7 +8,7 @@ const Welcome = lazy(async () => await import('../pages/Welcome'))
 const Dashboard = lazy(async () => await import('../pages/Dashboard'))
 const Login = lazy(async () => await import('../pages/Login'))
 // const Blank = lazy(async () => await import('../pages/protected/Blank'))
-// const Charts = lazy(async () => await import('../pages/protected/Charts'))
+// const Components = lazy(async () => await import('../pages/Components'))
 // const ProfileSettings = lazy(async () => await import('../pages/protected/ProfileSettings'))
 
 const routes = [
@@ -23,6 +23,10 @@ const routes = [
   {
     path: '/dashboard',
     component: Dashboard
+  },
+  {
+    path: '/login',
+    component: Login
   }
 
 ]

@@ -27,9 +27,9 @@ const routes = [
     name: 'Dashboard'
   },
   {
-    path: '/app/charts', // url
+    path: '/app/components', // url
     icon: <ChartBarIcon className={iconClasses}/>, // icon component
-    name: 'Charts' // name that appear in Sidebar
+    name: 'Components' // name that appear in Sidebar
   },
   {
     path: '/app/projects', // url
