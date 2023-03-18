@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import InputText from '../../components/Input/InputText'
 import { headerSlice } from '../../app/store'
 import Charts from '../charts'
+import Modals from './Modal'
 const statsData = [
   { title: 'Training資訊1', value: '100%', icon: <UserGroupIcon color=' green' className=' w-8 h-8 ml-2'/>, description: 'Training資訊輔助說明' },
   { title: 'Accuracy', value: '100%', icon: <CreditCardIcon color=' green' className=' w-8 h-8 ml-2'/>, description: '衡量model的準確率' },
@@ -39,6 +40,11 @@ function Dashboard () {
       </div>
         {/** ---------------------- Different charts ------------------------- */}
         <Charts/>
+        {/** ---------------------- Modal charts ------------------------- */}
+        <div className='grid lg:grid-cols-5 grid-cols-1 gap-6 '>
+         <Modals/>
+        </div>
+
    </div>
 </div>
   )

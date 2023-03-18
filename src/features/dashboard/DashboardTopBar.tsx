@@ -12,14 +12,11 @@ const periodOptions = [
   { name: 'Project4', value: 'LAST_MONTH' }
 ]
 const teamMembers = [
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profi123123123le-picture-5.jpg"},
-  {id:"0",name:""},
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
-  {id:"0",name:"",pictureSrc:"https://flowbite.com/docs/images/people/profile-picture-5.jpg"},
+  { id: '0', name: '', pictureSrc: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg' },
+  { id: '0', name: '', pictureSrc: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg' },
+  { id: '0', name: '', pictureSrc: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg' },
+  { id: '0', name: '', pictureSrc: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg' },
+  { id: '0', name: '', pictureSrc: 'https://flowbite.com/docs/images/people/profile-picture-5.jpg' }
 
 ]
 function DashboardTopBar ({ updateDashboardPeriod }) {
@@ -39,7 +36,6 @@ function DashboardTopBar ({ updateDashboardPeriod }) {
                 defaultValue="TODAY"
                 updateFormValue={updateSelectBoxValue}
             />
-            <StackAvatar teamMembers={teamMembers} displayLimit={5}/>
             </div>
             <div className="text-right ">
                 <button className=" inline-flex flex-shrink-0 cursor-pointer select-none flex-wrap items-center justify-center
